@@ -1,7 +1,5 @@
 from tabulate import tabulate
 
-
-
 class Interface:
     
 	def consultar_departamento(self):
