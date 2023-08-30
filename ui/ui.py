@@ -26,5 +26,5 @@ class Interface:
 			tabla = tabulate(datos, titulos, tablefmt = 'psq1')
 			print(tabla)
 		except: 
-			raise("Error: datos ingresados no validos")
+			print("Error: datos ingresados no validos")
 
