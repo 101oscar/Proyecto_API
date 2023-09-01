@@ -19,10 +19,13 @@ class Interface:
 		return limite_registros
 
 	def imprimir_datos(self, datos):
-		try:
-			titulos = ['Departamento', 'Municipio', 'Cultivo', 'Topografia', 'Nivel de pH', 'Fósforo', 'Potasio']
-			tabla = tabulate(datos, titulos, tablefmt = 'psq1')
-			print(tabla)
-		except: 
-			print("Error: datos ingresados no validos")
+		titulos = ['Departamento', 'Municipio', 'Cultivo', 'Topografia', 'Nivel de pH', 'Fósforo', 'Potasio']
+		tabla = tabulate(datos, titulos, tablefmt = 'psq1')
+		print(tabla)
 
+	def imprimir_mediana(self, medianas):
+		titulos = ['Mediana de Nivel pH', 'Mediana de Nivel de Fósforo', 'Mediana de Nivel de Potasio']
+		tabla = tabulate(medianas, titulos, tablefmt = 'psq1')
+		print("\n", tabla)
+
+		
