@@ -5,7 +5,7 @@ class Aplicacion:
 	campos = ['departamento', 'municipio', 'cultivo', 'topografia', 
 				'ph_agua_suelo_2_5_1_0', 'f_sforo_p_bray_ii_mg_kg', 'potasio_k_intercambiable_cmol_kg']
 
-	def _init_(self):
+	def init(self):
 		self.datos = []
 		
 	def borrar_datos(self):
@@ -36,5 +36,3 @@ class Aplicacion:
 				self.borrar_datos()
 
 Aplicacion().menu()
-
-	

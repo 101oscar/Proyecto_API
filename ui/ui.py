@@ -4,15 +4,15 @@ class Interface:
     
 	def consultar_departamento(self):
 		departamento = input("Seleccione un departamento: ")
-		return departamento.upper()
+		return departamento.upper().lstrip().rstrip()
 	
 	def consultar_municipio(self):
 		municipio = input("Seleccione un municipio: ")
-		return municipio.upper()
+		return municipio.upper().lstrip().rstrip()
 	
 	def consultar_cultivo(self):
-		cultivo = input("Seleccione un cultivo (Primera letra en mayúscula): ")
-		return cultivo
+		cultivo = input("Seleccione un cultivo: ")
+		return cultivo.capitalize().lstrip().rstrip()
 	
 	def consultar_limite(self):
 		limite_registros = int(input("Inserte un Número de Registros: "))
@@ -27,5 +27,3 @@ class Interface:
 		titulos = ['Mediana de Nivel pH', 'Mediana de Nivel de Fósforo', 'Mediana de Nivel de Potasio']
 		tabla = tabulate(medianas, titulos, tablefmt = 'psq1')
 		print("\n", tabla)
-
-		

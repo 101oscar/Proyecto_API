@@ -12,6 +12,7 @@ def obtener_datos(departamento, municipio, cultivo, limite, campos):
 		raise Exception("Error al obtener los datos, por favor repita la consulta e ingrese datos validos")
 
 def calcular_mediana(dataframe, campo):
-	datos_campo = dataframe[campo]
-	mediana = median(datos_campo)
-	return mediana
+    dataframe[campo] = pd.to_numeric(dataframe[campo], errors='coerce')
+    dataframe = dataframe.dropna(subset=[campo])
+    mediana = median(dataframe[campo])
+    return mediana
